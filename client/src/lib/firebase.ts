@@ -2,14 +2,20 @@ import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, type User } from "firebase/auth";
 import { useEffect, useState } from "react";
 
-// Fallback configuration to prevent crash if env vars are missing
+// Firebase configuration from environment variables
+const projectId = import.meta.env.VITE_FIREBASE_PROJECT_ID || "dummy-project";
+const appId = import.meta.env.VITE_FIREBASE_APP_ID || "1:00000000000:web:00000000000000";
+
+// Extract messagingSenderId from appId (format: 1:SENDER_ID:web:...)
+const messagingSenderId = appId.split(":")[1] || "00000000000";
+
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "dummy-key",
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || "dummy.firebaseapp.com",
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || "dummy-project",
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || "dummy.appspot.com",
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || "00000000000",
-  appId: import.meta.env.VITE_FIREBASE_APP_ID || "1:00000000000:web:00000000000000"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: `${projectId}.firebaseapp.com`,
+  projectId,
+  storageBucket: `${projectId}.firebasestorage.app`,
+  messagingSenderId,
+  appId
 };
 
 const app = initializeApp(firebaseConfig);
