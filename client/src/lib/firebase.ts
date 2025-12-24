@@ -3,7 +3,7 @@ import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, type User } from
 import { useEffect, useState } from "react";
 
 // Firebase configuration from environment variables
-const projectId = import.meta.env.VITE_FIREBASE_PROJECT_ID || "test-9a041";
+const projectId = import.meta.env.VITE_FIREBASE_PROJECT_ID || "test";
 const appId = import.meta.env.VITE_FIREBASE_APP_ID || "1:00000000000:web:00000000000000";
 
 // Extract messagingSenderId from appId (format: 1:SENDER_ID:web:...)
