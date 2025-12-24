@@ -55,7 +55,9 @@ export async function registerRoutes(
         "I'm sorry, I cannot process your request at the moment.";
 
       try {
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" }); // Use a standard model name supported by the integration
+        const model = genAI.models.generateContent({
+          model: "gemini-2.5-flash",
+        }); // Use a standard model name supported by the integration
         const prompt = `${systemInstruction}\n\nUser: ${message}`;
         const result = await model.generateContent(prompt);
         aiResponseText = result.response.text();

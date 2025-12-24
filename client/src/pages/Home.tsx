@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Shield, UserCheck, Clock } from "lucide-react";
 import { Link } from "wouter";
+// import bg from "@/public/bg.jpg";
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -22,7 +23,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-blue-50/50 to-white z-10" />
           {/* Abstract calm nature background */}
           <img 
-            src="https://pixabay.com/get/g2b88a58240c5d75d6801a7267f3b3b37e8af10b66bf1d51549a34e55b78ca33c408df1f35c9cf1b3fd121045bec369c15f4547299eaa3d4e487b7b84589aa2f6_1280.jpg" 
+            src="https://images.unsplash.com/photo-1486520299386-6d106b22014b?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
             alt="Serene landscape" 
             className="w-full h-full object-cover opacity-60"
           />
@@ -93,7 +94,7 @@ export default function Home() {
         </div>
       </section>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

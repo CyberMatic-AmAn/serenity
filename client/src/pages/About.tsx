@@ -52,7 +52,7 @@ export default function About() {
         </div>
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
