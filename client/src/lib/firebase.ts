@@ -11,9 +11,9 @@ const messagingSenderId = appId.split(":")[1] || "00000000000";
 
 const firebaseConfig = {
   apiKey: "api key here",
-  authDomain: "test-9a041.firebaseapp.com",
+  authDomain: "test.firebaseapp.com",
   projectId: "test" || projectId,
-  storageBucket: "test-9a041.firebasestorage.app",
+  storageBucket: "test.firebasestorage.app",
   messagingSenderId: "here-should-be-sender-id" || messagingSenderId,
   appId: "your-app-id-here" || appId,
 };
