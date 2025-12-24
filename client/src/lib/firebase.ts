@@ -10,12 +10,12 @@ const appId = import.meta.env.VITE_FIREBASE_APP_ID || "1:00000000000:web:0000000
 const messagingSenderId = appId.split(":")[1] || "00000000000";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBn_2EToCxy1ZGRLmvFSweryoKVGtzJLGM",
+  apiKey: "api key here",
   authDomain: "test-9a041.firebaseapp.com",
-  projectId: "test-9a041",
+  projectId: "test" || projectId,
   storageBucket: "test-9a041.firebasestorage.app",
-  messagingSenderId: "504697427854",
-  appId: "1:504697427854:web:f51e60242c2ac836edf6df"
+  messagingSenderId: "here-should-be-sender-id" || messagingSenderId,
+  appId: "your-app-id-here" || appId,
 };
 
 const app = initializeApp(firebaseConfig);

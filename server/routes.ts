@@ -9,7 +9,7 @@ import { GoogleGenAI } from "@google/genai";
 const genAI = new GoogleGenAI({
   apiKey:
     process.env.AI_INTEGRATIONS_GEMINI_API_KEY ||
-    "AIzaSyDa6AWT3jksC-C-xBlf6vA2oDJ0RvQ8N3A",
+    "gemini key here",
   httpOptions: {
     apiVersion: "",
     baseUrl: process.env.AI_INTEGRATIONS_GEMINI_BASE_URL,
